@@ -9,14 +9,14 @@ class VirtualDisk:
 
     def __init__(self):
         self.disk_path = None
-        self.disk_file = None
-        self.is_open = False
+        self.disk_file = None # pointer to the open disk file
+        self.is_open = False 
         self.disk_size = 0
 
     def Initialize(self, path, createIfMissing=True):
 
         if self.is_open:
-            raise RuntimeError("Disk is already initialized")
+            raise RuntimeError("Disk is already initialized") #  just call initialize function once
 
         self.disk_path = path
         self.disk_size = self.CLUSTERS_NUMBER * self.CLUSTER_SIZE
