@@ -1,10 +1,10 @@
-from fs_constants import FsConstants
+from FsConstants import FsConstants
 
 
 class SuperblockManager:
 
-    def __init__(self, virtual_disk):
-        self.vd = virtual_disk
+    def __init__(self, VirtualDisk):
+        self.vd = VirtualDisk
 
     def ReadSuperblock(self):
         return self.vd.ReadCluster(FsConstants.SUPERBLOCK_CLUSTER)

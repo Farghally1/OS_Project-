@@ -1,13 +1,12 @@
-from virtual_disk import VirtualDisk
-from fat_table_manager import FatTableManager
-from directory_manager import DirectoryManager, DirectoryEntry
+from VirtualDisk import VirtualDisk
+from FatTableManager import FatTableManager
+from DirectoryManager import DirectoryManager, DirectoryEntry
 from Converter import Converter
-from fs_constants import FsConstants
-
+from FsConstants import FsConstants
 
 class FileSystem:
-    def __init__(self, virtual_disk: VirtualDisk, fat_table: FatTableManager, dir_manager: DirectoryManager):
-        self.disk = virtual_disk
+    def __init__(self, VirtualDisk: VirtualDisk, fat_table: FatTableManager, dir_manager: DirectoryManager):
+        self.disk = VirtualDisk
         self.fat = fat_table
         self.dir = dir_manager
 

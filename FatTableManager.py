@@ -1,11 +1,10 @@
 import struct
-from fs_constants import FsConstants
-
+from FsConstants import FsConstants
 
 class FatTableManager:
 
-    def __init__(self, virtual_disk):
-        self.vd = virtual_disk
+    def __init__(self, VirtualDisk):
+        self.vd = VirtualDisk
 
         # FAT table in memory
         self.fat = [0] * FsConstants.CLUSTER_COUNT

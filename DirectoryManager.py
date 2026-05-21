@@ -1,6 +1,6 @@
 import struct
-from fs_constants import FsConstants
-from fat_table_manager import FatTableManager
+from FsConstants import FsConstants
+from FatTableManager import FatTableManager
 
 class DirectoryEntry:
     def __init__(self, name, attr, first_cluster, file_size):

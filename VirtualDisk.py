@@ -1,5 +1,5 @@
 import os
-from fs_constants import FsConstants
+from FsConstants import FsConstants
 
 
 class VirtualDisk:
